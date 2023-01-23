@@ -7,22 +7,7 @@
 <lifespan unit="years">60</lifespan>
 <location>Africa</location>
 <food>Veggies</food>
-<family>
-<maleName>elephant</maleName>
-<femaleName>elephant</femaleName>
-<babyName>calf</babyName>
-<gestationPeriod>22 months</gestationPeriod>
-</family>
-<famousAnimal>
-<name>Dumbo</name>
-</famousAnimal>
+<picture></picture>
 </species>
-<species>
-<name>Mouse</name>
-<weight unit="g">10-20</weight>
-<famousAnimal>
-<name>Mickey</name>
-<name>Minnie</name>
-</famousAnimal>
-</species>
+
 </mammals>
