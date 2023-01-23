@@ -7,7 +7,7 @@
 <lifespan unit="years">60</lifespan>
 <location>Africa</location>
 <food>Veggies</food>
-<picture></picture>
+<picture>./assets/elephant.png</picture>
 </species>
 
 </mammals>
