@@ -3,14 +3,29 @@ nav {
     height: 80px;
 }
 
-li {
+nav li {
     list-style-type: none;
     color: #f2af1e;
     cursor: pointer;
     transition: all 0.2s;
 }
 
-li:hover {
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav li:hover {
     background: #f2af1e;
     color: wheat;
+}
+
+.container {
+    transform: translate(-50%, -50%);
+}
+
+.container span {
+    color: white;
+    text-transform: uppercase;
+    display: block;
 }
