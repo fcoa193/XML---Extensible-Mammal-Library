@@ -13,12 +13,23 @@
 </head>
 
 <body>
+    <audio controls loop>
+        <source src="./assets/sound.mp3" type="audio/mpeg">
+        <source src="your-audio-file.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        document.querySelector("audio").play();
+    </script>
+
+    <audio src="./assets/sound.mp3" controls loop autoplay style="display:none"></audio>
+
     <header>
-        <nav class="position-absolute">
-            <ul class="d-flex">
-                <li>Home</li>
-                <li>Animals</li>
-                <li>Statistics</li>
+        <nav class="position-absolute w-100 d-flex justify-content-center">
+            <ul class="d-flex w-50 p-0 justify-content-around fs-4 m-0 align-items-center">
+                <li class="h-100 d-flex px-5 align-items-center">Home</li>
+                <li class="h-100 d-flex px-5 align-items-center">Animals</li>
+                <li class="h-100 d-flex px-5 align-items-center">Statistics</li>
             </ul>
         </nav>
         <img src="./assets/bg.jpg" alt="" class="w-100">

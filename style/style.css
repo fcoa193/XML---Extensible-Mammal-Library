@@ -1,0 +1,16 @@
+nav {
+    background: #0d5943;
+    height: 80px;
+}
+
+li {
+    list-style-type: none;
+    color: #f2af1e;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+li:hover {
+    background: #f2af1e;
+    color: wheat;
+}
