@@ -1,6 +1,7 @@
 nav {
     background: #0d5943;
     height: 80px;
+    z-index: 10;
 }
 
 nav li {
@@ -53,7 +54,7 @@ nav li:hover {
     letter-spacing: 8px;
     margin-bottom: 0px;
     position: relative;
-    background: #d4ecf4;
+    background: #d0eaf6;
     animation: text 3s 1;
     padding-bottom: 20px;
 }
@@ -83,6 +84,7 @@ nav li:hover {
 
 #animals {
     margin-top: 40px;
+    cursor: pointer;
 }
 
 /* -------------------card--------------------- */
@@ -114,4 +116,11 @@ nav li:hover {
 .fich h3 {
     text-align: center;
     margin: 15px auto;
+}
+
+/* --------------------------Modal----------------------- */
+.modal_content {
+    display: none;
+    transform: translate(-50%, -50%);
+    background: #0d5943;
 }
