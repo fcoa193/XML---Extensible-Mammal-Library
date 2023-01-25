@@ -8,7 +8,7 @@
             <lifespan>4 years</lifespan>
             <location>Every ocean on earth</location>
             <food>Omnivore</food>
-            <dangerousness>Pretty much harmless<dangerousness>
+            <dangerousness>Pretty much harmless</dangerousness>
             <picture></picture>
         </crab>
     </species>
@@ -24,7 +24,7 @@
             <lifespan>13 years</lifespan>
             <location>Mostly in household but in the wild => Forests and brush lands</location>
             <food>Omnivore</food>
-            <dangerousness>Can be deadly<dangerousness>
+            <dangerousness>Can be deadly</dangerousness>
             <picture></picture>
         </dog>
     </species>
@@ -40,7 +40,7 @@
             <lifespan>40 years</lifespan>
             <location> worldwide, mostly in shallow seas of the continental shelves</location>
             <food>Carnivore</food>
-            <dangerousness>Can be deadly<dangerousness>
+            <dangerousness>Can be deadly</dangerousness>
             <picture></picture>
         </dolphin>
     </species>
@@ -56,7 +56,7 @@
             <lifespan unit="years">60</lifespan>
             <location>Africa</location>
             <food>Herbivore</food>
-            <dangerousness>deadly<dangerousness>
+            <dangerousness>deadly</dangerousness>
             <picture></picture>
         </elephant>
     </species>
@@ -70,7 +70,7 @@
             <lifespan>9 years</lifespan>
             <location>Rabbits prefer short grassy areas either found naturally, as in semi-arid areas, or resulting from heavily grazed pastures.</location>
             <food>Herbivores</food>
-            <dangerousness>can be dangerous<dangerousness>
+            <dangerousness>can be dangerous</dangerousness>
             <picture></picture>
         </monkey>
     </species>
@@ -84,7 +84,7 @@
             <lifespan>9 years</lifespan>
             <location>Rabbits prefer short grassy areas either found naturally, as in semi-arid areas, or resulting from heavily grazed pastures.</location>
             <food>Herbivores</food>
-            <dangerousness>harmless<dangerousness>
+            <dangerousness>harmless</dangerousness>
             <picture></picture>
         </rabbit>
     </species>
@@ -98,7 +98,7 @@
             <lifespan>11 years</lifespan>
             <location>Wild sheep are most often found across the Middle East, Asia, Central Europe and North America, where they inhabit steep mountainous areas.</location>
             <food>Herbivores</food>
-            <dangerousness>harmless<dangerousness>
+            <dangerousness>harmless</dangerousness>
             <picture></picture>
         </lamb>
     </species>
@@ -114,7 +114,7 @@
             <lifespan>11 years</lifespan>
             <location>In the most varied of our country environments, from rainforests and mountains to deserts. </location>
             <food>Carnivore</food>
-            <dangerousness>harmless<dangerousness>
+            <dangerousness>harmless</dangerousness>
             <picture></picture>
         </frog>
     </species>
