@@ -1,10 +1,11 @@
 <root>
 <crab>
     <name>Crab</name>
-    <weight>12.7kg</weight>
-    <size>18cm</size>
-    <speed>16km/h</speed>
-    <lifespan>4 years</lifespan>
+    <specie>Crustacea</specie>
+    <weight unit="kg">12.5</weight>
+    <size unit="cm">18</size>
+    <speed unit="km/h">16</speed>
+    <lifespan unit="years">4</lifespan>
     <location>Every ocean on earth</location>
     <food>Omnivore</food>
     <dangerousness>Pretty much harmless</dangerousness>
@@ -13,10 +14,11 @@
 
 <dog>
     <name>Dog</name>
-    <weight>up to 100kg</weight>
-    <size>up to 110cm</size>
-    <speed>72km/h</speed>
-    <lifespan>13 years</lifespan>
+    <specie>Canidae</specie>
+    <weight unit="kg">60</weight>
+    <size unit="cm">65</size>
+    <speed unit="km/h">62</speed>
+    <lifespan unit="years">13</lifespan>
     <location>Mostly in household but in the wild => Forests and brush lands</location>
     <food>Omnivore</food>
     <dangerousness>Can be deadly</dangerousness>
@@ -25,10 +27,11 @@
 
 <dolphin>
     <name>Dolphin</name>
-    <weight>150kg</weight>
-    <size>2m</size>
-    <speed>60km/h</speed>
-    <lifespan>40 years</lifespan>
+    <specie>cetacean</specie>
+    <weight unit="kg">150</weight>
+    <size unit="cm">200</size>
+    <speed unit="km/h">60</speed>
+    <lifespan unit="years">40</lifespan>
     <location> worldwide, mostly in shallow seas of the continental shelves</location>
     <food>Carnivore</food>
     <dangerousness>Can be deadly</dangerousness>
@@ -37,8 +40,9 @@
 
 <elephant>
     <name>Elephant</name>
-    <weight unit="kg">4000kg</weight>
-    <size unit="m">3m</size>
+    <specie>Mammal</specie>
+    <weight unit="kg">4000</weight>
+    <size unit="cm">300</size>
     <speed unit="km/h">40</speed>
     <lifespan unit="years">60</lifespan>
     <location>Africa</location>
@@ -49,10 +53,11 @@
 
 <monkey>
     <name>Monkey</name>
-    <weight>15kg</weight>
-    <size>40cm</size>
-    <speed>55km/h</speed>
-    <lifespan>20 years</lifespan>
+    <specie>Mammal</specie>
+    <weight unit="kg">15</weight>
+    <size unit="cm">40</size>
+    <speed unit="km/h">55</speed>
+    <lifespan unit="years">20</lifespan>
     <location>Most monkeys live in the tropical rainforests of Asia, Africa, and Central and South America, or the savannas of Africa.</location>
     <food>Omnivore</food>
     <dangerousness>can be dangerous</dangerousness>
@@ -61,10 +66,11 @@
 
 <rabbit>
     <name>Rabbit</name>
-    <weight>2kg</weight>
-    <size>40cm</size>
-    <speed>40km/h</speed>
-    <lifespan>9 years</lifespan>
+    <specie>Mammal</specie>
+    <weight unit="kg">2</weight>
+    <size unit="cm">40</size>
+    <speed unit="km/h">40</speed>
+    <lifespan unit="years">9</lifespan>
     <location>Rabbits prefer short grassy areas either found naturally, as in semi-arid areas, or resulting from heavily grazed pastures.</location>
     <food>Herbivore</food>
     <dangerousness>harmless</dangerousness>
@@ -73,10 +79,11 @@
 
 <lamb>
     <name>Lamb</name>
-    <weight>105kg</weight>
-    <size>100cm</size>
-    <speed>24km/h</speed>
-    <lifespan>11 years</lifespan>
+    <specie>Mammal</specie>
+    <weight unit="kg">105</weight>
+    <size unit="cm">100</size>
+    <speed unit="km/h">24</speed>
+    <lifespan unit="years">11</lifespan>
     <location>Wild sheep are most often found across the Middle East, Asia, Central Europe and North America, where they inhabit steep mountainous areas.</location>
     <food>Herbivores</food>
     <dangerousness>harmless</dangerousness>
@@ -85,10 +92,11 @@
 
 <frog>
     <name>Frog</name>
-    <weight>22.7</weight>
-    <size>8cm</size>
-    <speed>50m/h</speed>
-    <lifespan>11 years</lifespan>
+    <specie>Amphibia</specie>
+    <weight unit="kg">0.0225</weight>
+    <size unit="cm">8</size>
+    <speed unit="km/h">0.05</speed>
+    <lifespan unit="years">11</lifespan>
     <location>In the most varied of our country environments, from rainforests and mountains to deserts. </location>
     <food>Carnivore</food>
     <dangerousness>harmless</dangerousness>
@@ -97,13 +105,66 @@
 
  <panda>
     <name>Panda</name>
-    <weight>100kg</weight>
-    <size>80cm</size>
-    <speed>32km/h</speed>
-    <lifespan>20 years</lifespan>
+    <specie>Crustacea</specie>
+    <weight unit="kg">100</weight>
+    <size unit="cm">80</size>
+    <speed unit="km/h">32</speed>
+    <lifespan unit="years">20</lifespan>
     <location>Pandas live mainly in temperate forests high in the mountains of southwest China. </location>
     <food>Carnivore</food>
-    <dangerousness>harmless</dangerousness>
+    <dangerousness>deadly</dangerousness>
     <picture>./assets/panda.jpg</picture>
 </panda>
+
+<pig>
+    <name>Pig</name>
+    <specie>Crustacea</specie>
+    <weight unit="kg">250</weight>
+    <size unit="cm">140</size>
+    <speed unit="km/h">17</speed>
+    <lifespan unit="years">17</lifespan>
+    <location>Domesticated; found nearly everywhere except Antarctica. Wild habitat is generally moist forests, swamps and shrublands, especially oak forests and regions where reeds are abundant. </location>
+    <food>Omnivore</food>
+    <dangerousness>harmless</dangerousness>
+    <picture></picture>
+ </pig>
+
+<penguin>
+    <name>Penguin</name>
+    <specie>Crustacea</specie>
+    <weight unit="kg">30</weight>
+    <size unit="cm">120</size>
+    <speed unit="km/h">8</speed>
+    <lifespan unit="years">18</lifespan>
+    <location>Penguin habitats include oceans and coasts. They generally live on islands and remote continental regions with few land predators. </location>
+    <food>Carnivore</food>
+    <dangerousness>mostly harmless</dangerousness>
+    <picture></picture>
+</penguin>
+
+<shark>
+    <name>Shark</name>
+    <specie>Crustacea</specie>
+    <weight unit="kg">500</weight>
+    <size unit="cm">400</size>
+    <speed unit="km/h">50</speed>
+    <lifespan unit="years">25</lifespan>
+    <location>They can be found in beautiful, tropical coral reefs, to the deep sea, and even under the Arctic sea ice. </location>
+    <food>Carnivore</food>
+    <dangerousness>mostly harmless</dangerousness>
+    <picture></picture>
+</shark>
+
+<tiger>
+    <name>Tiger</name>
+    <specie>Crustacea</specie>
+    <weight unit="kg">280</weight>
+    <size unit="cm">100</size>
+    <speed unit="km/h">65</speed>
+    <lifespan unit="years">9</lifespan>
+    <location>Tigers are found in rain forests, grasslands, savannas and even mangrove swamps.</location>
+    <food>Carnivore</food>
+    <dangerousness>deadly</dangerousness>
+    <picture></picture>
+</tiger>
 </root>
