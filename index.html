@@ -13,19 +13,16 @@
 </head>
 
 <body>
-    <!-- <audio controls loop>
+    <audio controls loop autoplay id="audio">
         <source src="./assets/sound.mp3" type="audio/mpeg">
         <source src="your-audio-file.ogg" type="audio/ogg">
         Your browser does not support the audio element.
     </audio>
-    <script>
-        document.querySelector("audio").play();
-    </script> -->
 
-    <audio src="./assets/sound.mp3" controls loop autoplay style="display:none"></audio>
+    <!-- <audio src="./assets/sound.mp3" controls loop autoplay style="display:none" id="audio"></audio> -->
 
     <header>
-        <nav class="position-absolute w-100 d-flex justify-content-center">
+        <nav class="position-fixed top-0 w-100 d-flex justify-content-center">
             <ul class="d-flex w-50 p-0 justify-content-around fs-4 m-0 align-items-center">
                 <li class="h-100 d-flex px-5 align-items-center"><a href="./index.html">Home</a></li>
                 <li class="h-100 d-flex px-5 align-items-center"><a href="#animals">Animals</a></li>
@@ -33,15 +30,30 @@
             </ul>
         </nav>
         <img src="./assets/bg.jpg" alt="" class="w-100">
-        <div class="container position-absolute text-center top-50 start-50 w-100">
-            <span class="text1 mb-2">Welcome in the</span>
+        <div class="container-text position-absolute text-center start-50 ">
+            <span class="text1">Welcome in the</span>
             <span class="text2">Jungle</span>
         </div>
     </header>
 
-    <section id="animals">
+    <section id="animals" class="d-flex justify-content-around flex-wrap">
 
     </section>
+
+    <div class="modal_content position-fixed top-50 start-50 p-5">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal_title"></h1>
+                    <button type="button" class="btn_close"><i class="bi bi-x"></i></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer>
 
     </footer>
