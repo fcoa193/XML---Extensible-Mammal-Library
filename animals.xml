@@ -1,4 +1,4 @@
-<anthropods>
+<crustacean>
      <species>
         <crab>
             <name>Crab</name>
@@ -8,11 +8,11 @@
             <lifespan>4 years</lifespan>
             <location>Every ocean on earth</location>
             <food>Omnivore</food>
-            <dangerousness>Pretty much harmless<dangerousness>
+            <dangerousness>Pretty much harmless</dangerousness>
             <picture></picture>
         </crab>
     </species>
-</anthropods>
+</crustacean>
 
 <canidae>
      <species>
@@ -24,7 +24,7 @@
             <lifespan>13 years</lifespan>
             <location>Mostly in household but in the wild => Forests and brush lands</location>
             <food>Omnivore</food>
-            <dangerousness>Can be deadly<dangerousness>
+            <dangerousness>Can be deadly</dangerousness>
             <picture></picture>
         </dog>
     </species>
@@ -40,7 +40,7 @@
             <lifespan>40 years</lifespan>
             <location> worldwide, mostly in shallow seas of the continental shelves</location>
             <food>Carnivore</food>
-            <dangerousness>Can be deadly<dangerousness>
+            <dangerousness>Can be deadly</dangerousness>
             <picture></picture>
         </dolphin>
     </species>
@@ -56,7 +56,7 @@
             <lifespan unit="years">60</lifespan>
             <location>Africa</location>
             <food>Herbivore</food>
-            <dangerousness>deadly<dangerousness>
+            <dangerousness>deadly</dangerousness>
             <picture></picture>
         </elephant>
     </species>
@@ -64,13 +64,13 @@
     <species>
         <monkey>
             <name>Monkey</name>
-            <weight>2kg</weight>
+            <weight>15kg</weight>
             <size>40cm</size>
-            <speed>40km/h</speed>
-            <lifespan>9 years</lifespan>
-            <location>Rabbits prefer short grassy areas either found naturally, as in semi-arid areas, or resulting from heavily grazed pastures.</location>
-            <food>Herbivores</food>
-            <dangerousness>can be dangerous<dangerousness>
+            <speed>55km/h</speed>
+            <lifespan>20 years</lifespan>
+            <location>Most monkeys live in the tropical rainforests of Asia, Africa, and Central and South America, or the savannas of Africa.</location>
+            <food>Omnivore</food>
+            <dangerousness>can be dangerous</dangerousness>
             <picture></picture>
         </monkey>
     </species>
@@ -83,8 +83,8 @@
             <speed>40km/h</speed>
             <lifespan>9 years</lifespan>
             <location>Rabbits prefer short grassy areas either found naturally, as in semi-arid areas, or resulting from heavily grazed pastures.</location>
-            <food>Herbivores</food>
-            <dangerousness>harmless<dangerousness>
+            <food>Herbivore</food>
+            <dangerousness>harmless</dangerousness>
             <picture></picture>
         </rabbit>
     </species>
@@ -98,9 +98,36 @@
             <lifespan>11 years</lifespan>
             <location>Wild sheep are most often found across the Middle East, Asia, Central Europe and North America, where they inhabit steep mountainous areas.</location>
             <food>Herbivores</food>
-            <dangerousness>harmless<dangerousness>
+            <dangerousness>harmless</dangerousness>
             <picture></picture>
         </lamb>
+    </species>
+    <species>
+        <panda>
+            <name>Panda</name>
+            <weight>100kg</weight>
+            <size>80cm</size>
+            <speed>32km/h</speed>
+            <lifespan>20 years</lifespan>
+            <location>Pandas live mainly in temperate forests high in the mountains of southwest China. </location>
+            <food>Carnivore</food>
+            <dangerousness>deadly<dangerousness>
+            <picture></picture>
+        </panda>
+    </species>
+
+    <species>
+        <pig>
+            <name>Pig</name>
+            <weight>250kg</weight>
+            <size>1.4m</size>
+            <speed>17km/h</speed>
+            <lifespan>17 years</lifespan>
+            <location>Domesticated; found nearly everywhere except Antarctica. Wild habitat is generally moist forests, swamps and shrublands, especially oak forests and regions where reeds are abundant. </location>
+            <food>Omnivore</food>
+            <dangerousness>harmless</dangerousness>
+            <picture></picture>
+        </pig>
     </species>
 </mammals>
 
@@ -114,8 +141,52 @@
             <lifespan>11 years</lifespan>
             <location>In the most varied of our country environments, from rainforests and mountains to deserts. </location>
             <food>Carnivore</food>
-            <dangerousness>harmless<dangerousness>
+            <dangerousness>from harmless to deadly</dangerousness>
             <picture></picture>
         </frog>
     </species>
 </amphibians>
+
+<birds>
+     <species>
+        <penguin>
+            <name>Penguin</name>
+            <weight>30kg</weight>
+            <size>1.2m</size>
+            <speed>8km/h</speed>
+            <lifespan>18 years</lifespan>
+            <location>Penguin habitats include oceans and coasts. They generally live on islands and remote continental regions with few land predators. </location>
+            <food>Carnivore</food>
+            <dangerousness>mostly harmless</dangerousness>
+            <picture></picture>
+        </penguin>
+    </species>
+</birds>
+
+     <species>to do
+        <shark>
+            <name>Shark</name>
+            <weight>500kg</weight>
+            <size>4m</size>
+            <speed>50km/h</speed>
+            <lifespan>25 years</lifespan>
+            <location>They can be found in beautiful, tropical coral reefs, to the deep sea, and even under the Arctic sea ice. </location>
+            <food>Carnivore</food>
+            <dangerousness>mostly harmless</dangerousness>
+            <picture></picture>
+        </penguin>
+    </species>
+
+    <species>to do
+        <tiger>
+            <name>Tiger</name>
+            <weight>280kg</weight>
+            <size>100cm</size>
+            <speed>65km/h</speed>
+            <lifespan>9 years</lifespan>
+            <location>Tigers are found in rain forests, grasslands, savannas and even mangrove swamps.</location>
+            <food>Carnivore</food>
+            <dangerousness>deadly</dangerousness>
+            <picture></picture>
+        </tiger>
+    </species>
