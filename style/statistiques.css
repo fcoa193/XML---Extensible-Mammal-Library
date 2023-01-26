@@ -34,6 +34,7 @@ nav li:hover {
     height: 100%;
     background-color: #d4ecf4;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -44,6 +45,12 @@ nav li:hover {
     padding: 10px;
     border: 2px solid #f2af1e;
     border-radius: 30px;
+}
+
+#chart label {
+    width: 100%;
+    text-align: center;
+    font-size: xx-large;
 }
 
 .animal-chart {
@@ -59,4 +66,23 @@ nav li:hover {
 
 .progress {
     margin-left: 10px;
+}
+
+#button {
+    margin-top: 20px;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#button button {
+    width: 15%;
+    background-color: #f2af1e;
+    border-radius: 40px;
+}
+
+#button button:hover {
+    background: #0d5943;
+    color: white;
+    transition: all 0.2s;
 }

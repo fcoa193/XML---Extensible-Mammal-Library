@@ -15,11 +15,11 @@
     </head>
     
     <body>
-        <audio controls loop autoplay id="audio">
+        <!-- <audio controls loop autoplay id="audio">
             <source src="./assets/sound.mp3" type="audio/mpeg">
             <source src="your-audio-file.ogg" type="audio/ogg">
             Your browser does not support the audio element.
-        </audio>
+        </audio> -->
     
         <!-- <audio src="./assets/sound.mp3" controls loop autoplay style="display:none" id="audio"></audio> -->
     
@@ -34,12 +34,13 @@
         </header>
         <section id="page">
             <div id="chart">
-                <div class="animal-chart">
-                    <p>Salut</p>
-                    <div class="progress"  role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
-                        <div class="progress-bar" style="width: 25%">30 Km/h</div>
-                    </div>
-                </div>
+                
+            </div>
+            <div id="button">
+                <button id="weight">Weight</button>
+                <button id="size">Size</button>
+                <button id="speed">Speed</button>
+                <button id="lifespan">Lifespan</button>
             </div>
         </section>
 
@@ -47,7 +48,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
-    <script src="./js/statistiques.js" type="module"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/animals.js" type="module"></script>
 </body>
 
 </html>
