@@ -5,6 +5,16 @@ let blurContent = document.querySelector("#blur_content");
 
 // audio.play();
 
+// Instanciation de l'objet FileReader
+// let reader = new FileReader();
+// console.log("coucou")
+// reader.onreadystatechange = function () {
+//     console.log("coucou")
+//     let xmlDoc = reader.result;
+//     console.log(xmlDoc);
+// };
+
+
 var xhr = new XMLHttpRequest();
 xhr.open("GET", "../animal.xml", true);
 xhr.onreadystatechange = function () {
@@ -21,6 +31,7 @@ xhr.onreadystatechange = function () {
         let food = xmlDoc.getElementsByTagName("food");
         let dangerousness = xmlDoc.getElementsByTagName("dangerousness");
 
+        // ------------------Affichage des cartes------------------
         for (let i = 0; i < names.length; i++) {
             animalsContent.innerHTML += `
             <div class="fich">
@@ -34,8 +45,7 @@ xhr.onreadystatechange = function () {
         let modalBody = document.querySelector(".modal-body");
         let modal = document.querySelector(".modal_content");
 
-        // --------Fermeture de la modal------------
-        console.log(closeButton);
+        // -----------Fermeture de la modal------------
         closeButton.addEventListener("click", () => {
             console.log("coucou");
             modal.style.display = "none";
@@ -43,49 +53,73 @@ xhr.onreadystatechange = function () {
         })
 
         // --------Ouverture de la modal------------
-        for (let i = 0; i < cards.length; i++) {
-            console.log(cards[i]);
-            cards[i].addEventListener("click", () => {
-                console.log("coucou");
-                modal.style.display = "block";
-                blurContent.style.display = "block";
-                // document.body.style.background = "grey"
+        let cardsArray = [...cards];
+        for (let i = 0; i < cardsArray.length; i++) {
+            function OpenModal() {
+                cardsArray[i].addEventListener("click", () => {
+                    console.log("coucou")
+                    modal.style.display = "block";
+                    blurContent.style.display = "block";
 
-                modalTitle.innerHTML = `${names[i].textContent}`;
-                modalBody.innerHTML = `
-                <hr/>
-                <div class="info_container">
-                    <img src=${pictures[i].textContent} class="img-modal" alt="">
-                </div>
-                <div class"w-50">
-                    <div>Weight : ${weight[i].textContent}</div>
-                    <div>Size : ${size[i].textContent}</div>
-                    <div>Speed : ${speed[i].textContent}</div>
-                    <div>Lifespan : ${lifespan[i].textContent}</div>
-                    <div>Location : ${location[i].textContent}</div>
-                    <div>Food : ${food[i].textContent}</div>
-                    <div>Dangerousness : ${dangerousness[i].textContent}</div>
-                </div>
-                `
-                console.log(names[i].textContent);
-                closeButton.addEventListener("click", () => {
-                    modal.style.display = "none";
+                    modalTitle.innerHTML = `${names[i].textContent}`;
+                    modalBody.innerHTML = `
+                    <hr/>
+                    <div class="info_container">
+                        <img src=${pictures[i].textContent} class="img-modal" alt="">
+                    </div>
+                    <div class"w-50">
+                        <div>Weight : ${weight[i].textContent}</div>
+                        <div>Size : ${size[i].textContent}</div>
+                        <div>Speed : ${speed[i].textContent}</div>
+                        <div>Lifespan : ${lifespan[i].textContent}</div>
+                        <div>Location : ${location[i].textContent}</div>
+                        <div>Food : ${food[i].textContent}</div>
+                        <div>Dangerousness : ${dangerousness[i].textContent}</div>
+                    </div>
+                    `
+                    console.log(names[i].textContent);
+                    closeButton.addEventListener("click", () => {
+                        modal.style.display = "none";
+                    })
+
+                    // -------------------Supprimer un élément--------------------
+                    let deleteButton = document.querySelector(".delete-btn");
+
+                    let picturesArray = [...pictures];
+                    let namesArray = [...names];
+                    deleteButton.addEventListener("click", () => {
+                        let elementToDelete = xmlDoc.getElementsByTagName(`${(namesArray[i].textContent).toLocaleLowerCase()}`)[0];
+                        console.log((namesArray[i].textContent).toLocaleLowerCase())
+                        console.log(elementToDelete)
+                        // Récupérer le parent de l'élément
+                        let parent = elementToDelete.parentNode;
+                        // Supprimer l'élément
+                        parent.removeChild(elementToDelete);
+                        // xhr.open("POST", "../animal.xml", true);
+                        // xhr.send(xmlDoc);
+
+                        animalsContent.innerHTML = "";
+                        cardsArray.splice(i, 1);
+                        picturesArray.splice(i, 1);
+                        namesArray.splice(i, 1);
+                        modal.style.display = "none";
+                        blurContent.style.display = "none";
+
+                        for (let i = 0; i < namesArray.length; i++) {
+                            console.log(picturesArray[i].textContent)
+
+                            animalsContent.innerHTML += `
+                            <div class="fich">
+                                <img src=${picturesArray[i].textContent} class="img" alt="">
+                                <h3 class="title">${namesArray[i].textContent}</h3>
+                            </div>
+                            `
+                            OpenModal();
+                        }
+                    })
                 })
-
-                // -------------------Supprimer un élément--------------------
-                let deleteButton = document.querySelector(".update-btn");
-                deleteButton.addEventListener("click", () => {
-                    console.log(cards)
-                    cards.splice(i, 1);
-                    console.log(cards)
-                })
-            })
-
-        }
-
-        // -------------------Supprimer un élément--------------------
-        for (let i = 0; i < names.length; i++) {
-
+            }
+            OpenModal();
         }
 
         // Modifiez le document XML ici
