@@ -1,6 +1,8 @@
 import {getXmlAnimals} from "./animals.js"
 
-const addChart = (nameChart) => {
+
+
+const addChart = () => {
     const chart = document.querySelector("#chart")
     const label = document.createElement("label")
     label.innerHTML = "Weight"
