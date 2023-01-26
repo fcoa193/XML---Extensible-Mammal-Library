@@ -1,10 +1,10 @@
-nav {
+nav,footer {
     background: #0d5943;
     height: 80px;
     z-index: 10;
 }
 
-nav li {
+nav li, footer li {
     list-style-type: none;
     color: #f2af1e;
     cursor: pointer;
@@ -16,7 +16,7 @@ a {
     color: inherit;
 }
 
-nav li:hover {
+nav li:hover, footer li:hover {
     background: #f2af1e;
     color: wheat;
 }
