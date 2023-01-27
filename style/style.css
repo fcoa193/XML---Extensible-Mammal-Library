@@ -121,8 +121,24 @@ nav li:hover, footer li:hover {
 }
 
 /* --------------------------Modal----------------------- */
+#blur_content {
+    display: none;
+    background: rgba(252, 252, 252, 0.8);
+    width: 100%;
+    height: 100%;
+}
+
 .modal_content {
     display: none;
     transform: translate(-50%, -50%);
-    background: #0d5943;
+    background: #42957d;
+}
+
+.info_container {
+    width: 100%;
+    margin-right: 30px;
+}
+
+.img-modal {
+    width: 100%;
 }
