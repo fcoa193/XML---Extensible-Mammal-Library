@@ -42,7 +42,7 @@ xhr.onreadystatechange = function () {
         }
         let cards = document.querySelectorAll(".fich");
         let modalTitle = document.querySelector(".modal_title");
-        let modalBody = document.querySelector(".modal-body");
+        let modalBody = document.querySelector(".modal_body");
         let modal = document.querySelector(".modal_content");
 
         // -----------Fermeture de la modal------------

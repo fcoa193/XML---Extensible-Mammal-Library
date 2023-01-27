@@ -37,6 +37,41 @@
         </div>
     </header>
 
+    <!-- Modal Create an animal card-->
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-success m-4" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      Create an animal card
+    </button>
+  
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Create an animal card</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex flex-column">
+                Name: <input type="text" class="create" id="createName" placeholder="Tiger">
+                Specie: <input type="text" class="create" id="createSpecie" placeholder="Feline">
+                Weight (kg): <input type="text" class="create" id="createWeight" placeholder="280">
+                Size (cm): <input type="text" class="create" id="createSize" placeholder="100">
+                Speed (km/h): <input type="text" class="create" id="createSpeed" placeholder="65">
+                Lifespan (Years): <input type="text" class="create" id="createLifespan" placeholder="9">
+                Location: <input type="text" class="create" id="createLocation" placeholder="Mostly Asia">
+                Food: <input type="text" class="create" id="createFood" placeholder="Carnivore">
+                Dangerousness: <input type="text" class="create" id="createDangerousness" placeholder="deadly">
+                Picture: <input type="file" class="create" id="createPicture">
+            </div>
+            <div class="modal-footer d-flex justify-content-around">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" id="btnCreate" class="btn btn-primary">Send</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
     <section id="animals" class="d-flex justify-content-around flex-wrap">
 
     </section>
@@ -50,7 +85,7 @@
                         <h1 class="modal_title text-center w-100 mb-5"></h1>
 
                     </div>
-                    <div class="modal-body d-flex">
+                    <div class="modal_body d-flex">
                     </div>
                     <div class="d-flex justify-content-center m-4">
                         <button class="update-btn mx-3 border-0 p-2">Modifier</button>
