@@ -68,7 +68,7 @@
 </rabbit>
 
 <lamb>
-    <name>Lamb</name>
+    <name>Sheep</name>
     <specie>Mammal</specie>
     <weight unit="kg">105</weight>
     <size unit="cm">100</size>
@@ -95,7 +95,7 @@
 
  <panda>
     <name>Panda</name>
-    <specie>Crustacea</specie>
+    <specie>Ursidae</specie>
     <weight unit="kg">100</weight>
     <size unit="cm">80</size>
     <speed unit="km/h">32</speed>
@@ -108,7 +108,7 @@
 
 <pig>
     <name>Pig</name>
-    <specie>Crustacea</specie>
+    <specie>mammal</specie>
     <weight unit="kg">250</weight>
     <size unit="cm">140</size>
     <speed unit="km/h">17</speed>
@@ -119,9 +119,9 @@
     <picture/>
  </pig>
 
-<penguin>
+<pingouin>
     <name>Penguin</name>
-    <specie>Crustacea</specie>
+    <specie>Bird</specie>
     <weight unit="kg">30</weight>
     <size unit="cm">120</size>
     <speed unit="km/h">8</speed>
@@ -129,12 +129,12 @@
     <location>Penguin habitats include oceans and coasts. They generally live on islands and remote continental regions with few land predators. </location>
     <food>Carnivore</food>
     <dangerousness>mostly harmless</dangerousness>
-    <picture/>
-</penguin>
+    <picture></picture>
+</pingouin>
 
 <shark>
     <name>Shark</name>
-    <specie>Crustacea</specie>
+    <specie>Fish</specie>
     <weight unit="kg">500</weight>
     <size unit="cm">400</size>
     <speed unit="km/h">50</speed>
@@ -147,7 +147,7 @@
 
 <tiger>
     <name>Tiger</name>
-    <specie>Crustacea</specie>
+    <specie>Feline</specie>
     <weight unit="kg">280</weight>
     <size unit="cm">100</size>
     <speed unit="km/h">65</speed>
