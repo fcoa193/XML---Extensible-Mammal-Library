@@ -140,3 +140,7 @@ nav li:hover {
 .img-modal {
     width: 100%;
 }
+
+.validate-btn {
+    display: none;
+}

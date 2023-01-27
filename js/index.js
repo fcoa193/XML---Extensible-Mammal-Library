@@ -2,18 +2,9 @@ let audio = document.querySelector("#audio");
 let animalsContent = document.querySelector("#animals");
 let closeButton = document.querySelector(".btn_close");
 let blurContent = document.querySelector("#blur_content");
+let edit = false;
 
 // audio.play();
-
-// Instanciation de l'objet FileReader
-// let reader = new FileReader();
-// console.log("coucou")
-// reader.onreadystatechange = function () {
-//     console.log("coucou")
-//     let xmlDoc = reader.result;
-//     console.log(xmlDoc);
-// };
-
 
 var xhr = new XMLHttpRequest();
 xhr.open("GET", "../animal.xml", true);
@@ -42,45 +33,61 @@ xhr.onreadystatechange = function () {
         }
         let cards = document.querySelectorAll(".fich");
         let modalTitle = document.querySelector(".modal_title");
-        let modalBody = document.querySelector(".modal-body");
+        let modalBody = document.querySelector(".modal_body");
         let modal = document.querySelector(".modal_content");
 
-        // -----------Fermeture de la modal------------
+        // -----------Fermeture de la modale------------
         closeButton.addEventListener("click", () => {
-            console.log("coucou");
             modal.style.display = "none";
             blurContent.style.display = "none";
+            edit = false;
         })
 
-        // --------Ouverture de la modal------------
+        // --------Ouverture de la modale------------
         let cardsArray = [...cards];
         for (let i = 0; i < cardsArray.length; i++) {
             function OpenModal() {
                 cardsArray[i].addEventListener("click", () => {
-                    console.log("coucou")
                     modal.style.display = "block";
                     blurContent.style.display = "block";
 
-                    modalTitle.innerHTML = `${names[i].textContent}`;
-                    modalBody.innerHTML = `
-                    <hr/>
-                    <div class="info_container">
-                        <img src=${pictures[i].textContent} class="img-modal" alt="">
-                    </div>
-                    <div class"w-50">
-                        <div>Weight : ${weight[i].textContent}</div>
-                        <div>Size : ${size[i].textContent}</div>
-                        <div>Speed : ${speed[i].textContent}</div>
-                        <div>Lifespan : ${lifespan[i].textContent}</div>
-                        <div>Location : ${location[i].textContent}</div>
-                        <div>Food : ${food[i].textContent}</div>
-                        <div>Dangerousness : ${dangerousness[i].textContent}</div>
-                    </div>
-                    `
-                    console.log(names[i].textContent);
-                    closeButton.addEventListener("click", () => {
-                        modal.style.display = "none";
-                    })
+
+                    function displayInfosAnimal(i) {
+                        // ---------Afficher les infos de l'animal-------------
+                        modalTitle.innerHTML = `${names[i].textContent}`;
+                        modalBody.innerHTML = `
+                        <hr/>
+                        <div class="info_container">
+                            <img src=${pictures[i].textContent} class="img-modal" alt="">
+                        </div>
+                        <div class"w-50">
+                            <div>Weight : <span class="info_content"></span></div>
+                            <div>Size : <span class="info_content"></span></div>
+                            <div>Speed : <span class="info_content"></span></div>
+                            <div>Lifespan : <span class="info_content"></span></div>
+                            <div>Location : <span class="info_content"></span></div>
+                            <div>Food : <span class="info_content"></span></div>
+                            <div>Dangerousness : <span class="info_content"></span></div>
+                        </div>
+                        `
+                        let infoContents = document.querySelectorAll(".info_content");
+                        let infoArray = [weight[i].textContent, size[i].textContent, speed[i].textContent, lifespan[i].textContent, location[i].textContent, food[i].textContent, dangerousness[i].textContent]
+                        let inputs = [];
+                        for (let k = 0; k < infoContents.length; k++) {
+                            if (edit) {
+                                let input = document.createElement('input');
+                                input.type = "text";
+                                input.className = "input-infos-content";
+                                input.value = infoArray[k];
+                                inputs.push(input);
+                                infoContents[k].appendChild(input)
+                            } else {
+                                infoContents[k].innerHTML = infoArray[k];
+                            }
+                        }
+                        return [...inputs];
+                    }
+                    displayInfosAnimal(i);
 
                     // -------------------Supprimer un élément--------------------
                     let deleteButton = document.querySelector(".delete-btn");
@@ -90,13 +97,9 @@ xhr.onreadystatechange = function () {
                     deleteButton.addEventListener("click", () => {
                         let elementToDelete = xmlDoc.getElementsByTagName(`${(namesArray[i].textContent).toLocaleLowerCase()}`)[0];
                         console.log((namesArray[i].textContent).toLocaleLowerCase())
-                        console.log(elementToDelete)
-                        // Récupérer le parent de l'élément
+                        console.log(elementToDelete);
                         let parent = elementToDelete.parentNode;
-                        // Supprimer l'élément
                         parent.removeChild(elementToDelete);
-                        // xhr.open("POST", "../animal.xml", true);
-                        // xhr.send(xmlDoc);
 
                         animalsContent.innerHTML = "";
                         cardsArray.splice(i, 1);
@@ -117,15 +120,32 @@ xhr.onreadystatechange = function () {
                             OpenModal();
                         }
                     })
+
+                    // -------------------Modifier un élément--------------------
+                    let validateButton = document.querySelector(".validate-btn");
+                    let updateButton = document.querySelector(".update-btn");
+                    updateButton.addEventListener("click", () => {
+                        let elementToUpdate = (namesArray[i].textContent).toLocaleLowerCase();
+                        edit = true;
+                        validateButton.style.display = "block";
+                        displayInfosAnimal(i);
+                        let inputsToUpdate = document.querySelectorAll(".input-infos-content");
+
+                        validateButton.addEventListener("click", () => {
+                            let animalUpdated = { "tag": elementToUpdate };
+                            let keys = ["weight", "size", "speed", "lifespan", "location", "food", "dangerousness"]
+                            for (let a = 0; a < inputsToUpdate.length; a++) {
+                                console.log(inputsToUpdate[a].value);
+                                animalUpdated[keys[a]] = inputsToUpdate[a].value;
+                            }
+                            console.log(animalUpdated);
+                        })
+
+                    })
                 })
             }
             OpenModal();
         }
-
-        // Modifiez le document XML ici
-        // ...
-        // xhr.open("POST", "file.xml", true);
-        // xhr.send(xmlDoc);
     }
 };
 xhr.send();
