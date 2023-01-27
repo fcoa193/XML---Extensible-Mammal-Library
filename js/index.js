@@ -191,6 +191,8 @@ document.querySelector("#btnCreate").addEventListener("click", () => {
     const location = document.querySelector("#createLocation").value
     const food = document.querySelector("#createFood").value
     const dangerousness = document.querySelector("#createDangerousness").value
+    const image = document.querySelector("#createPicture").files[0]
+    
 
     const reqData = {tag: name, specie, weight, size, speed, lifespan, location, food, dangerousness}
     console.log(reqData)
@@ -207,6 +209,20 @@ document.querySelector("#btnCreate").addEventListener("click", () => {
     }
     console.log(stringData)
 
+    let formdata = new FormData()
+    formdata.append("image", image)
+    formdata.append("tag", reqData.tag)
+
+    fetch("http://127.0.0.1:8000/xml.php",
+    {
+        method: "POST",
+        body: formdata
+    }).then((res) => {
+        console.log(res)
+    }).catch((err) => {
+        console.log(err)
+    })
+
     fetch("http://127.0.0.1:8000/xml.php",
     {
         method: "POST",
@@ -217,5 +233,8 @@ document.querySelector("#btnCreate").addEventListener("click", () => {
     }).catch((err) => {
         console.log(err)
     })
+    
+
+    
 
 })
