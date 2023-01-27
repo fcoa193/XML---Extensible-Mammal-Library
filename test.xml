@@ -13,7 +13,17 @@
     <picture>./assets/crabe.jpg</picture>
 </crab>
 
-
+<dog>
+    <name>dog</name>
+    <weight>99</weight>
+    <size>99</size>
+    <speed>72km/h</speed>
+    <lifespan>13 years</lifespan>
+    <location>Mostly in household but in the wild =&gt; Forests and brush lands</location>
+    <food>Omnivore</food>
+    <dangerousness>Can be deadly</dangerousness>
+    <picture>./assets/dog.jpg</picture>
+<update>true</update></dog>
 
 <dolphin>
     <name>Dolphin</name>

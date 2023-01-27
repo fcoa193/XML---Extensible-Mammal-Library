@@ -14,16 +14,16 @@
 </crab>
 
 <dog>
-    <name>Dog</name>
-    <weight>up to 100kg</weight>
-    <size>up to 110cm</size>
+    <name>dog</name>
+    <weight>99</weight>
+    <size>99</size>
     <speed>72km/h</speed>
     <lifespan>13 years</lifespan>
-    <location>Mostly in household but in the wild => Forests and brush lands</location>
+    <location>Mostly in household but in the wild =&gt; Forests and brush lands</location>
     <food>Omnivore</food>
     <dangerousness>Can be deadly</dangerousness>
     <picture>./assets/dog.jpg</picture>
-</dog>
+<update>true</update></dog>
 
 <dolphin>
     <name>Dolphin</name>
@@ -139,7 +139,7 @@
     <location>Penguin habitats include oceans and coasts. They generally live on islands and remote continental regions with few land predators. </location>
     <food>Carnivore</food>
     <dangerousness>mostly harmless</dangerousness>
-    <picture></picture>
+    <picture/>
 </pingouin>
 
 <shark>
