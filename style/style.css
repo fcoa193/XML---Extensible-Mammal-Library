@@ -147,3 +147,30 @@ nav li:hover, footer li:hover {
     display: none;
 }
 
+@media (max-width: 1220px) {
+    #animation{
+        display: none;
+    }
+
+}
+@media (max-width: 850px){
+    #logo{
+        display: none;
+    }
+}
+@media (max-width: 800px) {
+    #animals {
+      justify-content: space-around;
+    }
+
+    .fich{
+        width: 44%;
+        flex-wrap: wrap;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .fich{
+        width: 86%;
+    }
+  }
