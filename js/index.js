@@ -42,7 +42,7 @@ xhr.onreadystatechange = function () {
         }
         let cards = document.querySelectorAll(".fich");
         let modalTitle = document.querySelector(".modal_title");
-        let modalBody = document.querySelector(".modal-body");
+        let modalBody = document.querySelector(".modal_body");
         let modal = document.querySelector(".modal_content");
 
         // -----------Fermeture de la modal------------
@@ -142,3 +142,44 @@ xhr.onreadystatechange = function () {
     }
 };
 xhr.send();
+
+
+//créer l'animal
+document.querySelector("#btnCreate").addEventListener("click", () => {
+    const name = document.querySelector("#createName").value
+    const specie = document.querySelector("#createSpecie").value
+    const weight = document.querySelector("#createWeight").value
+    const size = document.querySelector("#createSize").value
+    const speed = document.querySelector("#createSpeed").value
+    const lifespan = document.querySelector("#createLifespan").value
+    const location = document.querySelector("#createLocation").value
+    const food = document.querySelector("#createFood").value
+    const dangerousness = document.querySelector("#createDangerousness").value
+
+    const reqData = {tag: name, specie, weight, size, speed, lifespan, location, food, dangerousness}
+    console.log(reqData)
+    let stringData
+    let i = 0
+    for (const [key, value] of Object.entries(reqData)) {
+        if (i != 0) {
+            stringData += "&" + key + "=" + value
+        } else {
+
+            stringData = key + "=" + value
+        }
+        i++
+    }
+    console.log(stringData)
+
+    fetch("http://127.0.0.1:8000/xml.php",
+    {
+        method: "POST",
+        headers: {"Content-type": "application/x-www-form-urlencoded; charset=UTF-8"},
+        body: stringData + "&create=true"
+    }).then((res) => {
+        console.log(res)
+    }).catch((err) => {
+        console.log(err)
+    })
+
+})
