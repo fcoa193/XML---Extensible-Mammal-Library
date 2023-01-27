@@ -103,17 +103,17 @@ xhr.onreadystatechange = function () {
                         // Récupérer le parent de l'élément
                         let parent = elementToDelete.parentNode;
                         parent.removeChild(elementToDelete);
-                        
+
                         fetch("http://127.0.0.1:8000/xml.php",
-                        {
-                            method: "POST",
-                            headers: {"Content-type": "application/x-www-form-urlencoded; charset=UTF-8"},
-                            body: "source=" + (namesArray[i].textContent).toLocaleLowerCase() + "&delete=true"
-                        }).then((res) => {
-                            console.log(res)
-                        }).catch((err) => {
-                            console.log(err)
-                        })
+                            {
+                                method: "POST",
+                                headers: { "Content-type": "application/x-www-form-urlencoded; charset=UTF-8" },
+                                body: "source=" + (namesArray[i].textContent).toLocaleLowerCase() + "&delete=true"
+                            }).then((res) => {
+                                console.log(res)
+                            }).catch((err) => {
+                                console.log(err)
+                            })
 
                         animalsContent.innerHTML = "";
                         cardsArray.splice(i, 1);
@@ -146,12 +146,27 @@ xhr.onreadystatechange = function () {
                         let inputsToUpdate = document.querySelectorAll(".input-infos-content");
 
                         validateButton.addEventListener("click", () => {
-                            let animalUpdated = { "tag": elementToUpdate };
+                            // let animalUpdated = { "tag": elementToUpdate };
+                            let animalUpdated = `name=${elementToUpdate}`
                             let keys = ["weight", "size", "speed", "lifespan", "location", "food", "dangerousness"]
                             for (let a = 0; a < inputsToUpdate.length; a++) {
                                 console.log(inputsToUpdate[a].value);
-                                animalUpdated[keys[a]] = inputsToUpdate[a].value;
+                                // animalUpdated[keys[a]] = inputsToUpdate[a].value;
+                                animalUpdated += `&${keys[a]}=${inputsToUpdate[a].value}`;
                             }
+
+                            // Envoi de la requête au serveur
+                            fetch("http://127.0.0.1:8000/xml.php",
+                                {
+                                    method: "POST",
+                                    headers: { "Content-type": "application/x-www-form-urlencoded; charset=UTF-8" },
+                                    body: animalUpdated + "&update=true"
+                                }).then((res) => {
+                                    console.log(res)
+                                }).catch((err) => {
+                                    console.log(err)
+                                })
+
                             console.log(animalUpdated);
                         })
 
