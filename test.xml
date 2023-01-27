@@ -1,17 +1,6 @@
 <?xml version="1.0"?>
 <root>
-<crab>
-    <name>Crab</name>
-    <specie>Crustacea</specie>
-    <weight unit="kg">12.5</weight>
-    <size unit="cm">18</size>
-    <speed unit="km/h">16</speed>
-    <lifespan unit="years">4</lifespan>
-    <location>Every ocean on earth</location>
-    <food>Omnivore</food>
-    <dangerousness>Pretty much harmless</dangerousness>
-    <picture>./assets/crabe.jpg</picture>
-</crab>
+
 
 
 

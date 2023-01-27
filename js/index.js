@@ -1,8 +1,19 @@
 let audio = document.querySelector("#audio");
 let animalsContent = document.querySelector("#animals");
 let closeButton = document.querySelector(".btn_close");
+let blurContent = document.querySelector("#blur_content");
 
 // audio.play();
+
+// Instanciation de l'objet FileReader
+// let reader = new FileReader();
+// console.log("coucou")
+// reader.onreadystatechange = function () {
+//     console.log("coucou")
+//     let xmlDoc = reader.result;
+//     console.log(xmlDoc);
+// };
+
 
 var xhr = new XMLHttpRequest();
 xhr.open("GET", "../animal.xml", true);
@@ -10,8 +21,17 @@ xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
         var xmlDoc = xhr.responseXML;
         console.log(xmlDoc);
-        var names = xmlDoc.getElementsByTagName("name");
-        var pictures = xmlDoc.getElementsByTagName("picture");
+        let names = xmlDoc.getElementsByTagName("name");
+        let pictures = xmlDoc.getElementsByTagName("picture");
+        let weight = xmlDoc.getElementsByTagName("weight");
+        let size = xmlDoc.getElementsByTagName("size");
+        let speed = xmlDoc.getElementsByTagName("speed");
+        let lifespan = xmlDoc.getElementsByTagName("lifespan");
+        let location = xmlDoc.getElementsByTagName("location");
+        let food = xmlDoc.getElementsByTagName("food");
+        let dangerousness = xmlDoc.getElementsByTagName("dangerousness");
+
+        // ------------------Affichage des cartes------------------
         for (let i = 0; i < names.length; i++) {
             animalsContent.innerHTML += `
             <div class="fich">
@@ -21,34 +41,99 @@ xhr.onreadystatechange = function () {
             `
         }
         let cards = document.querySelectorAll(".fich");
-        let modalTitle = document.querySelectorAll(".modal_title");
+        let modalTitle = document.querySelector(".modal_title");
+        let modalBody = document.querySelector(".modal-body");
         let modal = document.querySelector(".modal_content");
 
-        // --------Fermeture de la modal------------
-        console.log(closeButton);
+        // -----------Fermeture de la modal------------
         closeButton.addEventListener("click", () => {
             console.log("coucou");
             modal.style.display = "none";
+            blurContent.style.display = "none";
         })
-        for (let i = 0; i < cards.length; i++) {
-            console.log(cards[i]);
-            cards[i].addEventListener("click", () => {
-                console.log("coucou");
-                modal.style.display = "block";
 
-                modalTitle.innerHTML = `${names[i].textContent}`;
-                console.log(closeButton);
-                closeButton.addEventListener("click", () => {
-                    console.log("coucou");
-                    modal.style.display = "none";
+        // --------Ouverture de la modal------------
+        let cardsArray = [...cards];
+        for (let i = 0; i < cardsArray.length; i++) {
+            function OpenModal() {
+                cardsArray[i].addEventListener("click", () => {
+                    console.log("coucou")
+                    modal.style.display = "block";
+                    blurContent.style.display = "block";
+
+                    modalTitle.innerHTML = `${names[i].textContent}`;
+                    modalBody.innerHTML = `
+                    <hr/>
+                    <div class="info_container">
+                        <img src=${pictures[i].textContent} class="img-modal" alt="">
+                    </div>
+                    <div class"w-50">
+                        <div>Weight : ${weight[i].textContent}</div>
+                        <div>Size : ${size[i].textContent}</div>
+                        <div>Speed : ${speed[i].textContent}</div>
+                        <div>Lifespan : ${lifespan[i].textContent}</div>
+                        <div>Location : ${location[i].textContent}</div>
+                        <div>Food : ${food[i].textContent}</div>
+                        <div>Dangerousness : ${dangerousness[i].textContent}</div>
+                    </div>
+                    `
+                    console.log(names[i].textContent);
+                    closeButton.addEventListener("click", () => {
+                        modal.style.display = "none";
+                    })
+
+                    // -------------------Supprimer un élément--------------------
+                    let deleteButton = document.querySelector(".delete-btn");
+
+                    let picturesArray = [...pictures];
+                    let namesArray = [...names];
+                    deleteButton.addEventListener("click", () => {
+                        let elementToDelete = xmlDoc.getElementsByTagName(`${(namesArray[i].textContent).toLocaleLowerCase()}`)[0];
+                        console.log("123456", (namesArray[i].textContent).toLocaleLowerCase())
+                        console.log(elementToDelete)
+                        // Récupérer le parent de l'élément
+                        let parent = elementToDelete.parentNode;
+                        // Supprimer l'élément
+                        parent.removeChild(elementToDelete);
+                        // xhr.open("POST", "../animal.xml", true);
+                        // xhr.send(xmlDoc);
+                        
+                        fetch("http://127.0.0.1:8000/xml.php",
+                        {
+                            method: "POST",
+                            headers: {"Content-type": "application/x-www-form-urlencoded; charset=UTF-8"},
+                            body: "source=" + (namesArray[i].textContent).toLocaleLowerCase() + "&delete=true"
+                        }).then((res) => {
+                            console.log(res)
+                        }).catch((err) => {
+                            console.log(err)
+                        })
+
+
+
+                        animalsContent.innerHTML = "";
+                        cardsArray.splice(i, 1);
+                        picturesArray.splice(i, 1);
+                        namesArray.splice(i, 1);
+                        modal.style.display = "none";
+                        blurContent.style.display = "none";
+
+                        for (let i = 0; i < namesArray.length; i++) {
+                            console.log(picturesArray[i].textContent)
+
+                            animalsContent.innerHTML += `
+                            <div class="fich">
+                                <img src=${picturesArray[i].textContent} class="img" alt="">
+                                <h3 class="title">${namesArray[i].textContent}</h3>
+                            </div>
+                            `
+                            OpenModal();
+                        }
+                    })
                 })
-                // modalTitle.innerHTML = 
-            })
-
+            }
+            OpenModal();
         }
-
-
-
 
         // Modifiez le document XML ici
         // ...
