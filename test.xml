@@ -1,17 +1,6 @@
 <?xml version="1.0"?>
 <root>
-<crab>
-    <name>Crab</name>
-    <specie>Crustacea</specie>
-    <weight unit="kg">12.5</weight>
-    <size unit="cm">18</size>
-    <speed unit="km/h">16</speed>
-    <lifespan unit="years">4</lifespan>
-    <location>Every ocean on earth</location>
-    <food>Omnivore</food>
-    <dangerousness>Pretty much harmless</dangerousness>
-    <picture>./assets/crabe.jpg</picture>
-</crab>
+
 
 
 
@@ -68,7 +57,7 @@
 </rabbit>
 
 <lamb>
-    <name>Sheep</name>
+    <name>Lamb</name>
     <specie>Mammal</specie>
     <weight unit="kg">105</weight>
     <size unit="cm">100</size>
@@ -95,7 +84,7 @@
 
  <panda>
     <name>Panda</name>
-    <specie>Ursidae</specie>
+    <specie>Crustacea</specie>
     <weight unit="kg">100</weight>
     <size unit="cm">80</size>
     <speed unit="km/h">32</speed>
@@ -108,7 +97,7 @@
 
 <pig>
     <name>Pig</name>
-    <specie>mammal</specie>
+    <specie>Crustacea</specie>
     <weight unit="kg">250</weight>
     <size unit="cm">140</size>
     <speed unit="km/h">17</speed>
@@ -119,9 +108,9 @@
     <picture/>
  </pig>
 
-<pingouin>
+<penguin>
     <name>Penguin</name>
-    <specie>Bird</specie>
+    <specie>Crustacea</specie>
     <weight unit="kg">30</weight>
     <size unit="cm">120</size>
     <speed unit="km/h">8</speed>
@@ -129,12 +118,12 @@
     <location>Penguin habitats include oceans and coasts. They generally live on islands and remote continental regions with few land predators. </location>
     <food>Carnivore</food>
     <dangerousness>mostly harmless</dangerousness>
-    <picture></picture>
-</pingouin>
+    <picture/>
+</penguin>
 
 <shark>
     <name>Shark</name>
-    <specie>Fish</specie>
+    <specie>Crustacea</specie>
     <weight unit="kg">500</weight>
     <size unit="cm">400</size>
     <speed unit="km/h">50</speed>
@@ -147,7 +136,7 @@
 
 <tiger>
     <name>Tiger</name>
-    <specie>Feline</specie>
+    <specie>Crustacea</specie>
     <weight unit="kg">280</weight>
     <size unit="cm">100</size>
     <speed unit="km/h">65</speed>

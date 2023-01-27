@@ -1,4 +1,3 @@
-<?xml version="1.0"?>
 <root>
 <crab>
     <name>Crab</name>
@@ -13,7 +12,18 @@
     <picture>./assets/crabe.jpg</picture>
 </crab>
 
-
+<dog>
+    <name>Dog</name>
+    <specie>Canidae</specie>
+    <weight unit="kg">60</weight>
+    <size unit="cm">65</size>
+    <speed unit="km/h">62</speed>
+    <lifespan unit="years">13</lifespan>
+    <location>Mostly in household but in the wild => Forests and brush lands</location>
+    <food>Omnivore</food>
+    <dangerousness>Can be deadly</dangerousness>
+    <picture>./assets/dog1.jpg</picture>
+</dog>
 
 <dolphin>
     <name>Dolphin</name>
@@ -68,7 +78,7 @@
 </rabbit>
 
 <lamb>
-    <name>Sheep</name>
+    <name>Lamb</name>
     <specie>Mammal</specie>
     <weight unit="kg">105</weight>
     <size unit="cm">100</size>
@@ -95,7 +105,7 @@
 
  <panda>
     <name>Panda</name>
-    <specie>Ursidae</specie>
+    <specie>Crustacea</specie>
     <weight unit="kg">100</weight>
     <size unit="cm">80</size>
     <speed unit="km/h">32</speed>
@@ -108,7 +118,7 @@
 
 <pig>
     <name>Pig</name>
-    <specie>mammal</specie>
+    <specie>Crustacea</specie>
     <weight unit="kg">250</weight>
     <size unit="cm">140</size>
     <speed unit="km/h">17</speed>
@@ -116,12 +126,12 @@
     <location>Domesticated; found nearly everywhere except Antarctica. Wild habitat is generally moist forests, swamps and shrublands, especially oak forests and regions where reeds are abundant. </location>
     <food>Omnivore</food>
     <dangerousness>harmless</dangerousness>
-    <picture/>
+    <picture></picture>
  </pig>
 
-<pingouin>
+<penguin>
     <name>Penguin</name>
-    <specie>Bird</specie>
+    <specie>Crustacea</specie>
     <weight unit="kg">30</weight>
     <size unit="cm">120</size>
     <speed unit="km/h">8</speed>
@@ -130,11 +140,11 @@
     <food>Carnivore</food>
     <dangerousness>mostly harmless</dangerousness>
     <picture></picture>
-</pingouin>
+</penguin>
 
 <shark>
     <name>Shark</name>
-    <specie>Fish</specie>
+    <specie>Crustacea</specie>
     <weight unit="kg">500</weight>
     <size unit="cm">400</size>
     <speed unit="km/h">50</speed>
@@ -142,12 +152,12 @@
     <location>They can be found in beautiful, tropical coral reefs, to the deep sea, and even under the Arctic sea ice. </location>
     <food>Carnivore</food>
     <dangerousness>mostly harmless</dangerousness>
-    <picture/>
+    <picture></picture>
 </shark>
 
 <tiger>
     <name>Tiger</name>
-    <specie>Feline</specie>
+    <specie>Crustacea</specie>
     <weight unit="kg">280</weight>
     <size unit="cm">100</size>
     <speed unit="km/h">65</speed>
@@ -155,6 +165,6 @@
     <location>Tigers are found in rain forests, grasslands, savannas and even mangrove swamps.</location>
     <food>Carnivore</food>
     <dangerousness>deadly</dangerousness>
-    <picture/>
+    <picture></picture>
 </tiger>
 </root>

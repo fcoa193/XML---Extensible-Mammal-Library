@@ -96,10 +96,24 @@ xhr.onreadystatechange = function () {
                     let namesArray = [...names];
                     deleteButton.addEventListener("click", () => {
                         let elementToDelete = xmlDoc.getElementsByTagName(`${(namesArray[i].textContent).toLocaleLowerCase()}`)[0];
+
                         console.log((namesArray[i].textContent).toLocaleLowerCase())
                         console.log(elementToDelete);
+
+                        // Récupérer le parent de l'élément
                         let parent = elementToDelete.parentNode;
                         parent.removeChild(elementToDelete);
+                        
+                        fetch("http://127.0.0.1:8000/xml.php",
+                        {
+                            method: "POST",
+                            headers: {"Content-type": "application/x-www-form-urlencoded; charset=UTF-8"},
+                            body: "source=" + (namesArray[i].textContent).toLocaleLowerCase() + "&delete=true"
+                        }).then((res) => {
+                            console.log(res)
+                        }).catch((err) => {
+                            console.log(err)
+                        })
 
                         animalsContent.innerHTML = "";
                         cardsArray.splice(i, 1);

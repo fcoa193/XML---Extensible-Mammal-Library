@@ -1,0 +1,88 @@
+p {
+    margin: 0;
+    width: 100px;
+}
+
+html, body {
+    height: 100%;
+}
+
+nav {
+    background: #0d5943;
+    height: 80px;
+    z-index: 10;
+}
+
+nav li {
+    list-style-type: none;
+    color: #f2af1e;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav li:hover {
+    background: #f2af1e;
+    color: wheat;
+}
+
+#page {
+    height: 100%;
+    background-color: #d4ecf4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#chart {
+    background-color: white;
+    width: 80%;
+    padding: 10px;
+    border: 2px solid #f2af1e;
+    border-radius: 30px;
+}
+
+#chart label {
+    width: 100%;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.animal-chart {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    
+}
+
+.progress, .progress-bar {
+    width: 100%;
+}
+
+.progress {
+    margin-left: 10px;
+}
+
+#button {
+    margin-top: 20px;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#button button {
+    width: 15%;
+    background-color: #f2af1e;
+    border-radius: 40px;
+}
+
+#button button:hover {
+    background: #0d5943;
+    color: white;
+    transition: all 0.2s;
+}
