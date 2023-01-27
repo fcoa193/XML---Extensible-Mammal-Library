@@ -129,7 +129,7 @@
     <location>Penguin habitats include oceans and coasts. They generally live on islands and remote continental regions with few land predators. </location>
     <food>Carnivore</food>
     <dangerousness>mostly harmless</dangerousness>
-    <picture></picture>
+    <picture/>
 </pingouin>
 
 <shark>
@@ -157,4 +157,5 @@
     <dangerousness>deadly</dangerousness>
     <picture/>
 </tiger>
+
 </root>
