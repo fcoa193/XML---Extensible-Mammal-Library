@@ -1,10 +1,12 @@
-nav,footer {
+nav,
+footer {
     background: #0d5943;
     height: 80px;
     z-index: 10;
 }
 
-nav li, footer li {
+nav li,
+footer li {
     list-style-type: none;
     color: #f2af1e;
     cursor: pointer;
@@ -16,7 +18,8 @@ a {
     color: inherit;
 }
 
-nav li:hover, footer li:hover {
+nav li:hover,
+footer li:hover {
     background: #f2af1e;
     color: wheat;
 }
@@ -86,6 +89,7 @@ nav li:hover, footer li:hover {
     margin-top: 40px;
     cursor: pointer;
 }
+
 /* -------------------footer--------------------- */
 
 
@@ -147,3 +151,7 @@ nav li:hover, footer li:hover {
     display: none;
 }
 
+footer span {
+    color: #f2af1e;
+    font-size: 20px;
+}
