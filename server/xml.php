@@ -21,15 +21,29 @@ while (($buffer = fgets($file, 4096)) !== false) {
 }
 
 $xml = simplexml_load_string($xmlDoc);
+   
+    if (isset($_POST["delete"]) && $_POST["delete"] == "true" && isset($_POST["source"])) {
+        $nana = $_POST["source"];
+        unset($xml->$nana);
+        $xml->saveXML("./../animal.xml");
+    }
 
-if (isset($_POST["delete"]) && $_POST["delete"] == "true" && isset($_POST["source"])) {
-    $nana = $_POST["source"];
+    if (isset($_POST["create"]) && $_POST["create"] == "true") {
+        $xml->addChild($_POST["tag"]);
+        $nana = $_POST["tag"];
+        foreach ($_POST as $key => $value) {
+            if ($key != "tag") {
+                if($key != "create") {
+                    $xml->$nana->addChild($key, $value);
+                }
+            }
+        }
+        $xml->saveXML("./../test.xml");
+    }
 
-    unset($xml->$nana);
-    $xml->saveXML("./../animal.xml");
-}
-print_r($_POST);
-if (isset($_POST["update"]) && $_POST["update"] == "true" && isset($_POST["source"])) {
-    
-}
-fclose($file);
+    if (isset($_POST["update"]) && $_POST["update"] == "true" && isset($_POST["source"])) {
+
+
+    }
+
+    fclose($file);
