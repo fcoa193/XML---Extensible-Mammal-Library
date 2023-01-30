@@ -126,7 +126,7 @@
     <location>Domesticated; found nearly everywhere except Antarctica. Wild habitat is generally moist forests, swamps and shrublands, especially oak forests and regions where reeds are abundant. </location>
     <food>Omnivore</food>
     <dangerousness>harmless</dangerousness>
-    <picture/>
+    <picture>./assets/cochon.jpg</picture>
  </pig>
 
 <pingouin>
@@ -139,7 +139,7 @@
     <location>Penguin habitats include oceans and coasts. They generally live on islands and remote continental regions with few land predators. </location>
     <food>Carnivore</food>
     <dangerousness>mostly harmless</dangerousness>
-    <picture/>
+    <picture>./assets/pingouin.jpg</picture>
 </pingouin>
 
 <shark>
@@ -152,7 +152,7 @@
     <location>They can be found in beautiful, tropical coral reefs, to the deep sea, and even under the Arctic sea ice. </location>
     <food>Carnivore</food>
     <dangerousness>mostly harmless</dangerousness>
-    <picture/>
+    <picture>./assets/requin.png</picture>
 </shark>
 
 <tiger>
@@ -165,7 +165,7 @@
     <location>Tigers are found in rain forests, grasslands, savannas and even mangrove swamps.</location>
     <food>Carnivore</food>
     <dangerousness>deadly</dangerousness>
-    <picture/>
+    <picture>./assets/tigre.png</picture>
 </tiger>
 
 </root>
